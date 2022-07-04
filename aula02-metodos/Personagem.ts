@@ -1,72 +1,57 @@
-import prompt from 'prompt-sync'
-// nome, energia, vida, ataque, defesa
-
-// classe
-class Personagem {
-    // atributos
-    // nome: string = ''
-    // energia: number = 0
-    // vida: number = 0
-    // ataque: number = 0 
-    // defesa: number = 0
-
-    // metodos
+export default class Personagem {
     constructor(
         public nome:string,
         public energia: number,
         public vida: number,
         public ataque: number,
         public defesa: number
-    ) {
-        // this.nome = nome
-        // this.energia = 50
-        // this.ataque = 50
+    ) {}
+
+    // Toda vez que pensar em ler dados na classe use Parâmetros
+    // Toda vez que pensar em imprimir na classe use Retorno
+
+    status (): string {
+        return `+======== ${this.nome} ================+\n` +
+        `| Energia               ====== ${this.energia.toFixed(1)} ==|\n` +
+        `| Vida                  ====== ${this.vida.toFixed(1)} ==|\n` +
+        `| Ataque                ====== ${this.ataque.toFixed(1)} ==| \n` +
+        `| Defesa                ====== ${this.defesa.toFixed(1)} ==| \n` +
+        `+=====================================+`
     }
-}
 
-let sansa: Personagem
-sansa = new Personagem('Sansa Stark', 40, 50, 20, 10)
+    treinarAtaque (): void {
+        this.ataque += Math.random() * 7
+        this.energia -= Math.random() * 10
 
-// sansa.nome = 'Sansa Stark'
-// sansa.ataque = 10
-// sansa.defesa = 20
-// sansa.energia = 50
-// sansa.vida = 100
+        if(this.ataque > 100) {
+            this.ataque = 0
+        }
+    }
 
-// let jon: Personagem = new Personagem()
-// jon.nome = "Jon Snow"
-// jon.ataque = 80
-// jon.defesa = 70
-// jon.energia = 90
-// jon.vida = 40
+    treinarDefesa (): void {
+        this.defesa += Math.random() * 10
+        this.energia -= Math.random() * 10
 
-// console.log('person: ', sansa);
-// console.log('person: ', jon);
+        if(this.defesa > 100) {
+            this.defesa = 0
+        }
+    }
 
-let teclado = prompt()
+    descansar (tempo: number): void {
+        this.energia += tempo * (Math.random() * 10)
+        
+        if(this.energia > 100) {
+            this.energia = 100
+        }
+    }
 
-let option: number = 0
+    batalhar (): number {
+        let desgaste: number = Math.random() * 100
+        this.energia -= desgaste
+        return desgaste
+    }
 
-while(option != 9) {
-    console.log('+======== Personagem ============+')
-    console.log('1. Treinar Ataque');
-    console.log('2. Treinar Defesa');
-    console.log('3. Imprimir Atributos');
-    console.log('9. Sair');
-    
-    option = +teclado('Escolha uma ação: ')
-
-    switch(option) {
-        case 1:
-            sansa.ataque += 2
-            break
-        case 2:
-            sansa.defesa += 2
-            break
-        case 3:
-            console.log('Sansa: ', sansa)            
-            break
-        default:
-            break
+    isDead (): boolean {
+       return this.energia < 0
     }
 }
