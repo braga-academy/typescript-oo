@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/braga-academy/typescript-oo/issues"
   },
-  "homepage": "https://github.com/braga-academy/typescript-oo#readme"
+  "homepage": "https://github.com/braga-academy/typescript-oo#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.1.1"
+  }
 }

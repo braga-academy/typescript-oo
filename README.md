@@ -58,3 +58,14 @@ modelo      | Camaro
 ano         | 2022
 potencia    | 400cv
 ...         |...
+
+### Exemplificando uma classe **Personagem**
+
+atributos   | Métodos
+----------- | ------
+nome        | treinarAtaque
+energia     | treinarDefesa
+vida        | desafiar
+ataque      | 
+defesa      |
+
