@@ -127,9 +127,9 @@ Métodos que tem como única funcionalidade **prover modificação** aos atribut
 - Recebe por parâmetro o valor a ser inserido no atributo;
 - Seu nome é composto pelo prefixo *"set"* seguido do nome do atributo que iremos possibilitar a modificação.
 
-> Crio o atributo privado e depoiscrio método para acessar e modificar!?
+> **Crio o atributo privado e depois crio métodos para acessar e modificar!?**
 > 
-> Por quê??
+> **Por quê??**
 
 #### O Motivo
 
