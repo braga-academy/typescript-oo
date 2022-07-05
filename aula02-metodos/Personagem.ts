@@ -1,10 +1,10 @@
 export default class Personagem {
     constructor(
-        public nome:string,
-        public energia: number,
-        public vida: number,
-        public ataque: number,
-        public defesa: number
+        private nome:string,
+        private energia: number,
+        private vida: number,
+        private ataque: number,
+        private defesa: number
     ) {}
 
     // Toda vez que pensar em ler dados na classe use Parâmetros
