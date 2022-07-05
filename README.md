@@ -135,3 +135,5 @@ Métodos que tem como única funcionalidade **prover modificação** aos atribut
 
 **Por que** nos métodos de acesso podemos **controlar** como a informação será retornada (no caso dos *gets*) e que tipo de dado será aceito para modificação (no caso dos *sets*)
 
+### Herança
+

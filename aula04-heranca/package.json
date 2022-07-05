@@ -1,0 +1,26 @@
+{
+  "name": "typescript-oo",
+  "version": "1.0.0",
+  "description": "Baseado na playlist:\r https://www.youtube.com/watch?list=PLDqnSpzNKDvnh-0RCYbIL5WzGCCFV1Ghm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braga-academy/typescript-oo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braga-academy/typescript-oo/issues"
+  },
+  "homepage": "https://github.com/braga-academy/typescript-oo#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.1.1"
+  }
+}
